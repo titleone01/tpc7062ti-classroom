@@ -1,0 +1,110 @@
+{
+  "device": "tpc7062ti",
+  "repo": "tpc7062ti-classroom",
+  "modelLabel": "TPC7062Ti",
+  "hardwareOnly": true,
+  "sourceKind": "teaching",
+  "variants": [
+    {
+      "id": "tpc7062ti",
+      "label": "TPC7062Ti",
+      "model": {
+        "full": "tpc7062ti-full.glb",
+        "compressed": "tpc7062ti-c61d7b2d855a.glb.gz",
+        "fallback": "tpc7062ti-c61d7b2d855a.glb",
+        "compressedBytes": 833349,
+        "decodedBytes": 1675680,
+        "triangles": 30610,
+        "sha256": "c61d7b2d855a6ea3c63779388117aacc14a454cf2ce001faff46dcd728685332",
+        "gzipSha256": "a0e5b52e8bbaadf5dc451a57fa79f5f7b0a3f85cc3560caca1fa6aaeaef5dee3"
+      },
+      "topicCount": 9,
+      "motions": [
+        {
+          "id": "power-plug",
+          "label": "电源插头",
+          "node": "power_terminal",
+          "translation": [
+            0,
+            0,
+            -18
+          ]
+        }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "id": "industrial-network",
+      "title": "工业网络与组态技术",
+      "url": "https://titleone01.github.io/tpc7062ti-classroom/industrial-network/",
+      "offlineFile": "工业网络与组态技术_tpc7062ti_硬件认识_离线.html",
+      "offline": {
+        "file": "工业网络与组态技术_tpc7062ti_硬件认识_离线.html",
+        "bytes": 3027947,
+        "sha256": "759b79c695bb8c5efdca24d5f90521b0b2373b73156b1333d67c4463223fac37",
+        "embeddedModels": [
+          {
+            "id": "tpc7062ti",
+            "bytes": 1675680,
+            "sha256": "c61d7b2d855a6ea3c63779388117aacc14a454cf2ce001faff46dcd728685332"
+          }
+        ]
+      },
+      "bundle": "app-cea69d803755.js",
+      "htmlSha256": "b1cf9abadc637abb319078f3a891cb64fca410d51991799eda38222ace765fba",
+      "bundleSha256": "cea69d803755d0b802f0b26ccc49cf881b18538b4021d6c6d085921da3582049",
+      "models": [
+        {
+          "variant": "tpc7062ti",
+          "file": "tpc7062ti-c61d7b2d855a.glb.gz",
+          "bytes": 833349,
+          "sha256": "a0e5b52e8bbaadf5dc451a57fa79f5f7b0a3f85cc3560caca1fa6aaeaef5dee3"
+        },
+        {
+          "variant": "tpc7062ti",
+          "file": "tpc7062ti-c61d7b2d855a.glb",
+          "bytes": 1675680,
+          "sha256": "c61d7b2d855a6ea3c63779388117aacc14a454cf2ce001faff46dcd728685332"
+        }
+      ],
+      "embed": "<iframe src=\"https://titleone01.github.io/tpc7062ti-classroom/industrial-network/\" title=\"工业网络与组态技术 · TPC7062Ti硬件认识\" width=\"100%\" height=\"1900\" style=\"border:0\" loading=\"lazy\" allow=\"fullscreen\"></iframe>"
+    },
+    {
+      "id": "plc-application",
+      "title": "PLC应用技术",
+      "url": "https://titleone01.github.io/tpc7062ti-classroom/plc-application/",
+      "offlineFile": "PLC应用技术_tpc7062ti_硬件认识_离线.html",
+      "offline": {
+        "file": "PLC应用技术_tpc7062ti_硬件认识_离线.html",
+        "bytes": 3027923,
+        "sha256": "80309bfa21f939bf7a620de8399c434c2fb5e432a3983404213a47cbad21f501",
+        "embeddedModels": [
+          {
+            "id": "tpc7062ti",
+            "bytes": 1675680,
+            "sha256": "c61d7b2d855a6ea3c63779388117aacc14a454cf2ce001faff46dcd728685332"
+          }
+        ]
+      },
+      "bundle": "app-cea69d803755.js",
+      "htmlSha256": "a35fbcf9c4b5220684fdd9c8f5a9fb7dab6e35f9f50b1fb33f549f6d0f002db1",
+      "bundleSha256": "cea69d803755d0b802f0b26ccc49cf881b18538b4021d6c6d085921da3582049",
+      "models": [
+        {
+          "variant": "tpc7062ti",
+          "file": "tpc7062ti-c61d7b2d855a.glb.gz",
+          "bytes": 833349,
+          "sha256": "a0e5b52e8bbaadf5dc451a57fa79f5f7b0a3f85cc3560caca1fa6aaeaef5dee3"
+        },
+        {
+          "variant": "tpc7062ti",
+          "file": "tpc7062ti-c61d7b2d855a.glb",
+          "bytes": 1675680,
+          "sha256": "c61d7b2d855a6ea3c63779388117aacc14a454cf2ce001faff46dcd728685332"
+        }
+      ],
+      "embed": "<iframe src=\"https://titleone01.github.io/tpc7062ti-classroom/plc-application/\" title=\"PLC应用技术 · TPC7062Ti硬件认识\" width=\"100%\" height=\"1900\" style=\"border:0\" loading=\"lazy\" allow=\"fullscreen\"></iframe>"
+    }
+  ]
+}

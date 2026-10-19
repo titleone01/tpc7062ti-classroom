@@ -1,0 +1,12 @@
+{
+  "file": "PLC应用技术_tpc7062ti_硬件认识_离线.html",
+  "bytes": 3027923,
+  "sha256": "80309bfa21f939bf7a620de8399c434c2fb5e432a3983404213a47cbad21f501",
+  "embeddedModels": [
+    {
+      "id": "tpc7062ti",
+      "bytes": 1675680,
+      "sha256": "c61d7b2d855a6ea3c63779388117aacc14a454cf2ce001faff46dcd728685332"
+    }
+  ]
+}

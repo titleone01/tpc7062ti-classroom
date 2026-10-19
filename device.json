@@ -1,0 +1,361 @@
+{
+  "id": "tpc7062ti",
+  "repo": "tpc7062ti-classroom",
+  "brand": "昆仑通态 MCGS",
+  "title": "TPC7062Ti 触摸屏硬件认识",
+  "modelLabel": "TPC7062Ti",
+  "sourceKind": "teaching",
+  "sourceLabel": "依据官方资料制作的教学模型",
+  "description": "认识 7 英寸 TPC7062Ti 的显示触控、电源、以太网、USB、串口和面板安装结构。整机按官方尺寸复建，细部依据官方照片近似制作；屏幕为静态教学画面。",
+  "sources": [
+    {
+      "title": "昆仑通态供稿：TPC7062Ti 产品介绍及参数图（2020-05-07）",
+      "url": "https://c.gongkong.com/mcgs/p123084.html"
+    },
+    {
+      "title": "昆仑通态供稿：TPC7062(1061)TD/TX/Ti 硬件使用手册（2017-03）",
+      "url": "https://c.gongkong.com/Detail/DataDetail?id=100325"
+    },
+    {
+      "title": "原厂产品正背面及接口标注图",
+      "url": "https://upload.gongkong.com/Upload/gongkong/baiduEditorImage/202005/07/6cbe94eb1a9143d193725baabe283714.jpg"
+    },
+    {
+      "title": "原厂产品参数图",
+      "url": "https://upload.gongkong.com/Upload/gongkong/baiduEditorImage/202005/07/ead71a1e04a14105a607f3d22622d18f.png"
+    }
+  ],
+  "variants": [
+    {
+      "id": "tpc7062ti",
+      "label": "TPC7062Ti",
+      "dimensions": [
+        226.5,
+        163,
+        36
+      ],
+      "model": {
+        "full": "tpc7062ti-full.glb",
+        "compressed": "tpc7062ti-c61d7b2d855a.glb.gz",
+        "fallback": "tpc7062ti-c61d7b2d855a.glb",
+        "compressedBytes": 833349,
+        "decodedBytes": 1675680,
+        "triangles": 30610,
+        "sha256": "c61d7b2d855a6ea3c63779388117aacc14a454cf2ce001faff46dcd728685332",
+        "gzipSha256": "a0e5b52e8bbaadf5dc451a57fa79f5f7b0a3f85cc3560caca1fa6aaeaef5dee3"
+      },
+      "topics": [
+        {
+          "id": "overview",
+          "title": "整机认识",
+          "eyebrow": "先辨型号 · 再找接口",
+          "summary": "TPC7062Ti 是 7 英寸嵌入式一体化触摸屏。正面用于显示和触摸输入，背面集中布置供电与通信接口。",
+          "purpose": "作为人机界面，显示 PLC 等控制设备的数据，并接收操作者的触摸输入。它本身不等同于 PLC 的输入输出模块。",
+          "connection": "先确认铭牌型号为 TPC7062Ti，再识别电源、LAN、USB1、USB2 与单个 DB9 串口。",
+          "example": "观察顺序：正面显示区 → 背面电源 → LAN → USB 主从口 → DB9 串口 → 安装槽。",
+          "notes": [
+            "整机外形尺寸为 226.5 × 163 × 36 mm，来自原厂手册。",
+            "本模型依据官方尺寸和照片复建，不是原厂 CAD；接口细部、圆角和纹理位置为教学近似。",
+            "仅展示硬件认识，不运行 MCGS 工程，不模拟真实触摸屏通信。"
+          ],
+          "sourceUrl": "https://c.gongkong.com/mcgs/p123084.html",
+          "sourceTitle": "原厂供稿产品介绍与硬件使用手册",
+          "view": "front"
+        },
+        {
+          "id": "display",
+          "title": "显示与触摸区",
+          "eyebrow": "7 英寸 · 800 × 480",
+          "summary": "正面是 7 英寸 TFT 液晶显示屏，显示分辨率为 800 × 480，采用四线电阻式触摸。",
+          "purpose": "液晶屏负责显示；触摸层把按压位置转换成输入信息，供组态画面中的操作对象使用。",
+          "connection": "触摸操作通过面板内部连接完成，外部通信通过背面接口连接控制器。正面没有需要接线的 PLC I/O 端子。",
+          "example": "先辨认显示区域和外侧面框，再翻到背面寻找向 PLC 传递数据的接口。",
+          "notes": [
+            "原厂产品页列明四线电阻式触摸分辨率为 4096 × 4096；它与 800 × 480 的显示像素是不同指标。",
+            "模型中的亮屏内容是静态教学图，不是原厂组态工程，也不提供画面按钮功能。",
+            "显示开口依据标称 7 英寸和 800:480 比例复建；开口的精确制造尺寸未获得。"
+          ],
+          "sourceUrl": "https://c.gongkong.com/mcgs/p123084.html",
+          "sourceTitle": "原厂供稿产品介绍：显示与触摸参数",
+          "view": "front",
+          "anchor": {
+            "position": [
+              0,
+              -3,
+              0.49
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "size": [
+              152.46,
+              91.48,
+              2
+            ],
+            "occlusionTolerance": 2
+          }
+        },
+        {
+          "id": "power",
+          "title": "24V 电源插头",
+          "eyebrow": "可拔两针 · 先断电再接线",
+          "summary": "背面的绿色插头是直流供电接口。额定电源为 24V DC ±20%，额定功率为 5W。",
+          "purpose": "向触摸屏提供工作电源。可拔插头便于在断电状态下接线和维护。",
+          "connection": "原厂手册规定 Pin 1 为正极（+）、Pin 2 为负极（−）。先按插头编号接好电源线、锁紧螺钉，再将插头插入电源插座。",
+          "example": "在断电条件下观察插头和固定插座的配合，再使用“拆离电源插头”查看插接关系。",
+          "notes": [
+            "仅接 24V 直流电源，不能接交流市电；手册建议独立供电、输出功率 15W。",
+            "此插头只有正、负两针，未配置第三个 PE 端子；不能把负极或 DB9 的信号 GND 标成保护接地端子。",
+            "编号定义以原厂手册和实物为准，不根据屏幕画面的上下左右推定极性。",
+            "拆离距离 18 mm 是教学展示距离，不是原厂规定的机械行程。"
+          ],
+          "sourceUrl": "https://c.gongkong.com/Detail/DataDetail?id=100325",
+          "sourceTitle": "原厂硬件使用手册 1.5：电源连接",
+          "view": "back",
+          "anchor": {
+            "node": "power_terminal",
+            "position": [
+              -63.3,
+              30.8,
+              -36
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "size": [
+              13,
+              21,
+              2
+            ],
+            "occlusionTolerance": 2
+          }
+        },
+        {
+          "id": "ethernet",
+          "title": "LAN 以太网接口",
+          "eyebrow": "RJ45 · 10M / 100M 自适应",
+          "summary": "从背面观察，LAN 位于左侧接口组的最上方，外形为 RJ45 插座。TPC7062Ti 配有 10M/100M 自适应以太网。",
+          "purpose": "提供以太网物理连接。手册明确支持通过网络连接电脑下载工程。",
+          "connection": "使用匹配的网线连接 LAN 与电脑或现场网络设备。实际与 PLC 的通信方式还要匹配 MCGS 驱动、地址与网络设置。",
+          "example": "找出插座中的八个触点，再与下方 USB 接口比较外形，避免只按“方孔”判断接口。",
+          "notes": [
+            "本教材只展示硬件接口，不进行 IP 配置或实时 PLC 联机。",
+            "同系列 TPC7062TD/TX 的接口配置不同，不能用它们代替本型号。",
+            "RJ45 内部塑件、触点和插座深度按照片制作，为教学近似。"
+          ],
+          "sourceUrl": "https://c.gongkong.com/Detail/DataDetail?id=100325",
+          "sourceTitle": "原厂硬件使用手册 2.1、3.1：LAN 与下载连接",
+          "view": "back",
+          "anchor": {
+            "position": [
+              67.8,
+              27.5,
+              -36
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "size": [
+              18,
+              19,
+              2
+            ],
+            "occlusionTolerance": 2
+          }
+        },
+        {
+          "id": "usb-host",
+          "title": "USB1 主口",
+          "eyebrow": "USB Type-A · USB 2.0",
+          "summary": "背面左侧接口组中间的长方形插座标为 USB1，原厂手册定义它为 USB 主口。",
+          "purpose": "辨认触摸屏作为 USB 主设备一侧的接口；它与用于连接电脑的 USB2 从口用途不同。",
+          "connection": "先核对 USB1 标识及 Type-A 外形，再按对应运行软件和设备的支持要求选用外设。",
+          "example": "比较 USB1 长方形开口和 USB2 近方形开口，记住“主口 USB1、从口 USB2”。",
+          "notes": [
+            "手册的接口表列为 1 × USB2.0 主口。",
+            "不把 USB1 当作本手册所示的电脑 USB 工程下载口。",
+            "本页不承诺任意 USB 外设可用；具体兼容性需依软件与实物资料核对。"
+          ],
+          "sourceUrl": "https://c.gongkong.com/Detail/DataDetail?id=100325",
+          "sourceTitle": "原厂硬件使用手册 2.1：USB1 主口",
+          "view": "back",
+          "anchor": {
+            "position": [
+              67.8,
+              6.1,
+              -36
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "size": [
+              12,
+              19,
+              2
+            ],
+            "occlusionTolerance": 2
+          }
+        },
+        {
+          "id": "usb-device",
+          "title": "USB2 从口",
+          "eyebrow": "USB Type-B · 电脑连接",
+          "summary": "背面左侧接口组最下方的近方形插座标为 USB2，原厂手册定义它为 USB 从口。",
+          "purpose": "为电脑与触摸屏提供 USB 物理连接。手册用该接口演示 USB 工程下载。",
+          "connection": "按手册连接示意，使用匹配的 USB 线连接电脑 USB 端与触摸屏 USB2 从口。",
+          "example": "沿“电脑 → USB 线 → USB2”的路径识别连接，不与上方 USB1 主口互换。",
+          "notes": [
+            "接口外形与连接位置来自原厂外观图和手册 3.1。",
+            "教材不安装驱动、不下载工程；真实连接还需要匹配的软件和驱动。"
+          ],
+          "sourceUrl": "https://c.gongkong.com/Detail/DataDetail?id=100325",
+          "sourceTitle": "原厂硬件使用手册 2.1、3.1：USB2 从口与硬件连接",
+          "view": "back",
+          "anchor": {
+            "position": [
+              67.8,
+              -16.5,
+              -36
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "size": [
+              16,
+              15,
+              2
+            ],
+            "occlusionTolerance": 2
+          }
+        },
+        {
+          "id": "serial",
+          "title": "DB9 串行接口",
+          "eyebrow": "一个插座 · 两路串行接口",
+          "summary": "背面右侧的单个 DB9 母座同时引出 COM1（RS232）和 COM2（RS485），并不是两个独立插座。",
+          "purpose": "根据控制器的物理层和协议，提供对应的串行通信线路。",
+          "connection": "手册定义 COM1：Pin 2 RXD、Pin 3 TXD、Pin 5 GND；COM2：Pin 7 RS485+、Pin 8 RS485−。接线应以针号和对应 PLC 手册为准。",
+          "example": "原厂手册给出的 S7-200 PPI 示例使用本屏 DB9 的 7、8 针连接 PLC 的 3（D+）、8（D−）针。该示例不适用于所有 PLC。",
+          "notes": [
+            "先确认 RS232 或 RS485，再核对线缆，不因 DB9 外形相同而直接互插。",
+            "Pin 5 的 GND 是串行接口信号参考，不能标作保护接地 PE。",
+            "模型呈现九孔外形；连接器的接线视角与针号须以手册针脚图核对。"
+          ],
+          "sourceUrl": "https://c.gongkong.com/Detail/DataDetail?id=100325",
+          "sourceTitle": "原厂硬件使用手册 2.2、2.3：串口引脚与 PLC 连接",
+          "view": "back",
+          "anchor": {
+            "position": [
+              -63.3,
+              -1.5,
+              -36
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "size": [
+              17,
+              34,
+              2
+            ],
+            "occlusionTolerance": 2
+          }
+        },
+        {
+          "id": "installation",
+          "title": "嵌入与挂钩安装",
+          "eyebrow": "开孔 215 × 152 mm · 挂钩固定",
+          "summary": "前面框贴在安装面板外侧，后嵌机身穿过开孔，再用挂钩和螺钉固定。",
+          "purpose": "利用前面框限位、后部挂钩夹紧安装面板，使触摸屏牢固嵌装。",
+          "connection": "原厂开孔为 215±0.5 × 152±0.5 mm。后嵌本体约 213 × 150 mm，整机深度 36 mm；手册规定安装角度为 0°～30°。",
+          "example": "从上方观察壳体安装槽，再对照手册中的“面板开孔 → 放入机身 → 挂钩锁紧”顺序。",
+          "notes": [
+            "安装前，手册要求螺钉前端与挂钩边缘基本持平。",
+            "安装槽、通风孔的细部间距与圆角由官方照片近似复建，不能用本模型加工安装孔。",
+            "本模型不拆开外壳，也不展示没有原厂几何依据的内部电路板。"
+          ],
+          "sourceUrl": "https://c.gongkong.com/Detail/DataDetail?id=100325",
+          "sourceTitle": "原厂硬件使用手册 1.2～1.4：安装角度、尺寸与挂钩",
+          "view": "top",
+          "anchor": {
+            "position": [
+              0,
+              75.2,
+              -19.5
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "size": [
+              190,
+              2,
+              16
+            ],
+            "occlusionTolerance": 2
+          }
+        },
+        {
+          "id": "nameplate",
+          "title": "铭牌与型号核对",
+          "eyebrow": "看型号 · 核额定电源",
+          "summary": "背面中央的铭牌用于核对型号与电气额定值。识别 TPC7062Ti 后，再选择对应接口和资料。",
+          "purpose": "避免将外观相近的 TD、TX、Ti 型号混用，或根据相似机型推断接口配置。",
+          "connection": "上电前核对 TPC7062Ti 和 24V DC ±20% 标识；接线时以实物铭牌、插头编号和对应原厂手册为准。",
+          "example": "从背面中央铭牌确认“Ti”，再向左找到本型号具备的 LAN 以太网口。",
+          "notes": [
+            "模型铭牌是按已确认参数重新绘制的教学图，不含真实序列号。",
+            "原厂参数图列出前面板 IP65；不能把这个标记理解为整个背面可进水。",
+            "模型表面商标和文字只用于识别原型及教学说明。"
+          ],
+          "sourceUrl": "https://c.gongkong.com/mcgs/p123084.html",
+          "sourceTitle": "原厂产品正背面图及参数图",
+          "view": "back",
+          "anchor": {
+            "position": [
+              7,
+              -1.5,
+              -35.12
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "size": [
+              82.8,
+              56.9,
+              2
+            ],
+            "occlusionTolerance": 2
+          }
+        }
+      ],
+      "motions": [
+        {
+          "id": "power-plug",
+          "label": "电源插头",
+          "node": "power_terminal",
+          "translation": [
+            0,
+            0,
+            -18
+          ]
+        }
+      ]
+    }
+  ]
+}
